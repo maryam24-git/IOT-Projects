@@ -1,4 +1,4 @@
-# Task #1: LED Dimming (PWM)
+# LED Dimming (PWM)
 
 This task demonstrates how to control the brightness of an LED using **Pulse Width Modulation (PWM)** by varying the duty cycle through an Arduino pin.
 
