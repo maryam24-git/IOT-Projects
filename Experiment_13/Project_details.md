@@ -7,7 +7,7 @@ The objective of this project is to interface multiple sensors with a microcontr
 
 ## Components Used
 - **Arduino Uno** (Microcontroller)
-- **TMP36 Temperature Sensors** (Used as an alternative for LM35 temperature sensing)
+- **TMP36 Temperature Sensors** (Used as an alternative for LM35 and DHT11 temperature sensing)
 - **Photoresistor (LDR)** (For light intensity measurement)
 - **Ultrasonic Sensor (HC-SR04)** (For distance measurement)
 - **Potentiometer** (Used as an emulator for Humidity sensing)
@@ -17,14 +17,13 @@ The objective of this project is to interface multiple sensors with a microcontr
 Due to component library limitations in the **Tinkercad** simulation environment, the following alternatives were utilized:
 
 1.  **LM35 Alternative:** Used **TMP36**, which operates on the same analog voltage-to-temperature principle.
-2.   A **Potentiometer** was employed to simulate humidity readings.
+2.  **DHT11 Alternative:** As a full DHT11 module was unavailable, a second **TMP36** was used to capture temperature data
+3.   A **Potentiometer** was employed to simulate humidity readings.
     * **Why a Potentiometer?** Since a dedicated humidity sensor is not present in the Tinkercad library, the potentiometer acts as an emulator. By mapping the analog input range (0–1023) to a percentage range (0–100%), it simulates humidity fluctuations effectively, allowing for successful data processing logic demonstration.
 
 ## Circuit Connections
 - **Temp Sensor 1:** Connected to **A0**
 - **LDR:** Connected to **A1** (with 10kΩ pull-down resistor)
+-  **Temp Sensor 2:** Connected to **A2**
 - **Humidity (Potentiometer):** Connected to **A3**
 - **Ultrasonic Sensor:** Trig to **D3**, Echo to **D4**
-
----
-*Created for Embedded Systems Lab - Sensor Node Architecture*
